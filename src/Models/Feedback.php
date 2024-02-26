@@ -3,8 +3,8 @@
 namespace AdminKit\Feedbacks\Models;
 
 use AdminKit\Core\Abstracts\Models\AbstractModel;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use AdminKit\Feedbacks\Database\Factories\FeedbackFactory;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Feedback extends AbstractModel
 {
