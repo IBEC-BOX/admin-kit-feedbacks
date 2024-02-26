@@ -1,13 +1,13 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace AdminKit\Feedbacks;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
-use VendorName\Skeleton\Providers\RouteServiceProvider;
+use AdminKit\Feedbacks\Commands\FeedbacksCommand;
+use AdminKit\Feedbacks\Providers\RouteServiceProvider;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class FeedbacksServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -17,12 +17,12 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('admin-kit-feedbacks')
             ->hasConfigFile()
             ->hasViews()
             ->hasTranslations()
-            ->hasMigration('create_migration_table_name_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_admin_kit_feedbacks_table')
+            ->hasCommand(FeedbacksCommand::class);
     }
 
     public function registeringPackage()

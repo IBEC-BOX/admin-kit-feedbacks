@@ -1,17 +1,17 @@
 <?php
 
-namespace VendorName\Skeleton\UI\Filament\Resources;
+namespace AdminKit\Feedbacks\UI\Filament\Resources;
 
 use AdminKit\Core\Forms\Components\TranslatableTabs;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use VendorName\Skeleton\Models\SingleName;
-use VendorName\Skeleton\UI\Filament\Resources\SingleNameResource\Pages;
+use AdminKit\Feedbacks\Models\Feedback;
+use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
 
-class SingleNameResource extends Resource
+class FeedbackResource extends Resource
 {
-    protected static ?string $model = SingleName::class;
+    protected static ?string $model = Feedback::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -21,7 +21,7 @@ class SingleNameResource extends Resource
             ->schema([
                 TranslatableTabs::make(fn ($locale) => Forms\Components\Tabs\Tab::make($locale)->schema([
                     Forms\Components\TextInput::make('title')
-                        ->label(__('skeleton::skeleton_without_prefix.resource.title'))
+                        ->label(__('admin-kit-feedbacks::feedbacks.resource.title'))
                         ->required($locale === app()->getLocale()),
                 ])),
             ])
@@ -33,12 +33,12 @@ class SingleNameResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('id')
-                    ->label(__('skeleton::skeleton_without_prefix.resource.id'))
+                    ->label(__('admin-kit-feedbacks::feedbacks.resource.id'))
                     ->sortable(),
                 Tables\Columns\TextColumn::make('title')
-                    ->label(__('skeleton::skeleton_without_prefix.resource.title')),
+                    ->label(__('admin-kit-feedbacks::feedbacks.resource.title')),
                 Tables\Columns\TextColumn::make('created_at')
-                    ->label(__('skeleton::skeleton_without_prefix.resource.created_at')),
+                    ->label(__('admin-kit-feedbacks::feedbacks.resource.created_at')),
             ])
             ->defaultSort('id', 'desc')
             ->filters([
@@ -64,24 +64,24 @@ class SingleNameResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSingleName::route('/'),
-            'create' => Pages\CreateSingleName::route('/create'),
-            'edit' => Pages\EditSingleName::route('/{record}/edit'),
+            'index' => Pages\ListFeedback::route('/'),
+            'create' => Pages\CreateFeedback::route('/create'),
+            'edit' => Pages\EditFeedback::route('/{record}/edit'),
         ];
     }
 
     public static function getLabel(): ?string
     {
-        return __('skeleton::skeleton_without_prefix.resource.label');
+        return __('admin-kit-feedbacks::feedbacks.resource.label');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('skeleton::skeleton_without_prefix.resource.plural_label');
+        return __('admin-kit-feedbacks::feedbacks.resource.plural_label');
     }
 
     public static function getNavigationGroup(): ?string
     {
-        return __('skeleton::skeleton_without_prefix.resource.plural_label');
+        return __('admin-kit-feedbacks::feedbacks.resource.plural_label');
     }
 }

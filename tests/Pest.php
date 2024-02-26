@@ -1,5 +1,5 @@
 <?php
 
-use VendorName\Skeleton\Tests\TestCase;
+use AdminKit\Feedbacks\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
