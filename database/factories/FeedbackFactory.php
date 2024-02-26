@@ -2,8 +2,8 @@
 
 namespace AdminKit\Feedbacks\Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use AdminKit\Feedbacks\Models\Feedback;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FeedbackFactory extends Factory
 {

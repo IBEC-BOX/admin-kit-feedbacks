@@ -2,10 +2,10 @@
 
 namespace AdminKit\Feedbacks;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use AdminKit\Feedbacks\Commands\FeedbacksCommand;
 use AdminKit\Feedbacks\Providers\RouteServiceProvider;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class FeedbacksServiceProvider extends PackageServiceProvider
 {

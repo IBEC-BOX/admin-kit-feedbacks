@@ -3,9 +3,9 @@
 namespace AdminKit\Feedbacks\Models;
 
 use AdminKit\Core\Abstracts\Models\AbstractModel;
+use AdminKit\Feedbacks\Database\Factories\FeedbackFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\Translatable\HasTranslations;
-use AdminKit\Feedbacks\Database\Factories\FeedbackFactory;
 
 class Feedback extends AbstractModel
 {

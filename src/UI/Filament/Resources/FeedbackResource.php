@@ -3,11 +3,11 @@
 namespace AdminKit\Feedbacks\UI\Filament\Resources;
 
 use AdminKit\Core\Forms\Components\TranslatableTabs;
+use AdminKit\Feedbacks\Models\Feedback;
+use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
 use Filament\Forms;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use AdminKit\Feedbacks\Models\Feedback;
-use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
 
 class FeedbackResource extends Resource
 {

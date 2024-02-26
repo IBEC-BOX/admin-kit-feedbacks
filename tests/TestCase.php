@@ -2,10 +2,10 @@
 
 namespace AdminKit\Feedbacks\Tests;
 
+use AdminKit\Feedbacks\FeedbacksServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use AdminKit\Feedbacks\FeedbacksServiceProvider;
 
 class TestCase extends Orchestra
 {

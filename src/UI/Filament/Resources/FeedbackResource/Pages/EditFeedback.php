@@ -2,9 +2,9 @@
 
 namespace AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
 
+use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
-use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource;
 
 class EditFeedback extends EditRecord
 {

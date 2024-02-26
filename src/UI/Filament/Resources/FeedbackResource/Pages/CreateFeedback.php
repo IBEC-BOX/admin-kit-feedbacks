@@ -2,8 +2,8 @@
 
 namespace AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
 
-use Filament\Resources\Pages\CreateRecord;
 use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource;
+use Filament\Resources\Pages\CreateRecord;
 
 class CreateFeedback extends CreateRecord
 {

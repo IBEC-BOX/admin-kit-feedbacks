@@ -2,9 +2,9 @@
 
 namespace AdminKit\Feedbacks;
 
+use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
-use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource;
 
 class FilamentPlugin implements Plugin
 {
