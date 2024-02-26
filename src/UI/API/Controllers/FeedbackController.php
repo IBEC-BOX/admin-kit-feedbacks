@@ -4,17 +4,21 @@ declare(strict_types=1);
 
 namespace AdminKit\Feedbacks\UI\API\Controllers;
 
+use Illuminate\Http\Response;
 use AdminKit\Feedbacks\Models\Feedback;
+use AdminKit\Feedbacks\UI\API\Requests\FeedbackStoreRequest;
 
 class FeedbackController extends Controller
 {
-    public function index()
+    public function store(FeedbackStoreRequest $request): Response
     {
-        return Feedback::all();
-    }
+        Feedback::query()
+            ->create(
+                $request->merge([
+                    'locale' => app()->getLocale(),
+                ])->toArray()
+            );
 
-    public function show(int $id)
-    {
-        return Feedback::findOrFail($id);
+        return response('OK');
     }
 }
