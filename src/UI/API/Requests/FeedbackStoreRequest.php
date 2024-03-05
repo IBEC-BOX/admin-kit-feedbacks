@@ -11,6 +11,7 @@ class FeedbackStoreRequest extends FormRequest
         return [
             'name' => 'required|string|max:255',
             'phone' => 'required|string|min:18|max:18',
+            recaptchaFieldName() => recaptchaRuleName(),
         ];
     }
 
@@ -21,6 +22,7 @@ class FeedbackStoreRequest extends FormRequest
             'string' => __('admin-kit-feedbacks::feedbacks.api.messages.string'),
             'max' => __('admin-kit-feedbacks::feedbacks.api.messages.max'),
             'min' => __('admin-kit-feedbacks::feedbacks.api.messages.min'),
+            'recaptcha' => __('admin-kit-feedbacks::feedbacks.api.messages.recaptcha'),
         ];
     }
 
