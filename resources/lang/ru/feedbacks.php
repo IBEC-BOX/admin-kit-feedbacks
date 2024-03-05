@@ -27,7 +27,7 @@ return [
                 'string' => 'Поле :attribute должно быть не короче :min символов.',
             ],
             'string' => 'Поле :attribute должно быть строкой.',
-            'recaptcha' => 'Неверная recaptcha.'
+            'recaptcha' => 'Неверная recaptcha.',
         ],
     ],
 ];

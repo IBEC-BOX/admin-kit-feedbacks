@@ -27,7 +27,7 @@ return [
                 'string' => 'The :attribute field must be at least :min characters.',
             ],
             'string' => 'The :attribute field must be a string.',
-            'recaptcha' => 'Invalid recaptcha.'
+            'recaptcha' => 'Invalid recaptcha.',
         ],
     ],
 ];
