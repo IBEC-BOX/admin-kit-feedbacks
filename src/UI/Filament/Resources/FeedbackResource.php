@@ -2,10 +2,10 @@
 
 namespace AdminKit\Feedbacks\UI\Filament\Resources;
 
+use Filament\Tables;
+use Filament\Resources\Resource;
 use AdminKit\Feedbacks\Models\Feedback;
 use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
-use Filament\Resources\Resource;
-use Filament\Tables;
 
 class FeedbackResource extends Resource
 {
@@ -16,27 +16,21 @@ class FeedbackResource extends Resource
     public static function table(Tables\Table $table): Tables\Table
     {
         return $table
-            ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->label(__('admin-kit-feedbacks::feedbacks.resource.name')),
-                Tables\Columns\TextColumn::make('phone')
-                    ->label(__('admin-kit-feedbacks::feedbacks.resource.phone')),
-                Tables\Columns\TextColumn::make('locale')
-                    ->label(__('admin-kit-feedbacks::feedbacks.resource.locale')),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->label(__('admin-kit-feedbacks::feedbacks.resource.created_at')),
-            ])
-            ->defaultSort('id', 'desc')
-            ->filters([
-                //
-            ]);
-    }
-
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
+            ->columns(
+                collect(config('admin-kit-feedbacks.fields'))
+                    ->map(
+                        fn (array $item, string $key) => Tables\Columns\TextColumn::make("fields.$key")
+                            ->label(__($item['label'] ?? $key))
+                    )
+                    ->merge([
+                        Tables\Columns\TextColumn::make('locale')
+                            ->label(__('admin-kit-feedbacks::feedbacks.resource.locale')),
+                        Tables\Columns\TextColumn::make('created_at')
+                            ->label(__('admin-kit-feedbacks::feedbacks.resource.created_at')),
+                    ])
+                    ->toArray()
+            )
+            ->defaultSort('id', 'desc');
     }
 
     public static function getPages(): array

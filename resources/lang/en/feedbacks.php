@@ -6,18 +6,12 @@ return [
         'plural_label' => 'Feedback',
 
         'id' => 'ID',
-        'name' => 'Name',
-        'phone' => 'Phone',
         'locale' => 'Preferred language',
 
         'created_at' => 'Created At',
         'updated_at' => 'Updated At',
     ],
     'api' => [
-        'attributes' => [
-            'name' => 'name',
-            'phone' => 'phone',
-        ],
         'messages' => [
             'required' => 'The :attribute field is required.',
             'max' => [

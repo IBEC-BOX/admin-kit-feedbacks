@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace AdminKit\Feedbacks\UI\API\Controllers;
 
+use Illuminate\Http\Response;
 use AdminKit\Feedbacks\Models\Feedback;
 use AdminKit\Feedbacks\UI\API\Requests\FeedbackStoreRequest;
-use Illuminate\Http\Response;
 
 class FeedbackController extends Controller
 {
@@ -14,9 +14,9 @@ class FeedbackController extends Controller
     {
         Feedback::query()
             ->create(
-                $request->merge([
-                    'locale' => app()->getLocale(),
-                ])->toArray()
+                collect(['fields' => $request->validated()])
+                    ->merge(['locale' => app()->getLocale()])
+                    ->toArray()
             );
 
         return response('OK');

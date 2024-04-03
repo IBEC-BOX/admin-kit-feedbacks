@@ -13,9 +13,12 @@ class Feedback extends AbstractModel
     protected $table = 'admin_kit_feedbacks';
 
     protected $fillable = [
-        'name',
-        'phone',
+        'fields',
         'locale',
+    ];
+
+    protected $casts = [
+        'fields' => 'array'
     ];
 
     protected static function newFactory(): FeedbackFactory
