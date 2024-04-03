@@ -23,7 +23,7 @@ class FeedbacksServiceProvider extends PackageServiceProvider
             ->hasTranslations()
             ->hasMigrations([
                 'create_admin_kit_feedbacks_table',
-                'replace_name_phone_with_fields_in_admin_kit_feedbacks_table'
+                'replace_name_phone_with_fields_in_admin_kit_feedbacks_table',
             ])
             ->hasCommand(FeedbacksCommand::class);
     }
