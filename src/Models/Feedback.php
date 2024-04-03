@@ -18,7 +18,7 @@ class Feedback extends AbstractModel
     ];
 
     protected $casts = [
-        'fields' => 'array'
+        'fields' => 'array',
     ];
 
     protected static function newFactory(): FeedbackFactory

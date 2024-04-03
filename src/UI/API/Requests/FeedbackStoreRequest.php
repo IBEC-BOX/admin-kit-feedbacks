@@ -2,8 +2,8 @@
 
 namespace AdminKit\Feedbacks\UI\API\Requests;
 
-use Illuminate\Support\Collection;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Collection;
 
 class FeedbackStoreRequest extends FormRequest
 {

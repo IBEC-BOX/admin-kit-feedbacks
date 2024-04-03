@@ -2,8 +2,8 @@
 
 namespace AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
 
-use Filament\Resources\Pages\ListRecords;
 use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource;
+use Filament\Resources\Pages\ListRecords;
 
 class ListFeedback extends ListRecords
 {

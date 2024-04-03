@@ -2,10 +2,10 @@
 
 namespace AdminKit\Feedbacks\UI\Filament\Resources;
 
-use Filament\Tables;
-use Filament\Resources\Resource;
 use AdminKit\Feedbacks\Models\Feedback;
 use AdminKit\Feedbacks\UI\Filament\Resources\FeedbackResource\Pages;
+use Filament\Resources\Resource;
+use Filament\Tables;
 
 class FeedbackResource extends Resource
 {
