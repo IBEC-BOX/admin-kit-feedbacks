@@ -10,9 +10,7 @@ class FeedbackNotificationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct(public array $fields)
-    {
-    }
+    public function __construct(public array $fields) {}
 
     public function build()
     {

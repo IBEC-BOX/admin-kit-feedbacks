@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace AdminKit\Feedbacks\UI\API\Controllers;
 
+use AdminKit\Feedbacks\Events\FeedbackSaved;
 use AdminKit\Feedbacks\Models\Feedback;
 use AdminKit\Feedbacks\UI\API\Requests\FeedbackStoreRequest;
 use Illuminate\Http\Response;
-use AdminKit\Feedbacks\Events\FeedbackSaved;
 
 class FeedbackController extends Controller
 {

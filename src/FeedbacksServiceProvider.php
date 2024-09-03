@@ -3,9 +3,9 @@
 namespace AdminKit\Feedbacks;
 
 use AdminKit\Feedbacks\Commands\FeedbacksCommand;
+use AdminKit\Feedbacks\Events\FeedbackSaved;
 use AdminKit\Feedbacks\Listeners\NotifyAboutNewFeedback;
 use AdminKit\Feedbacks\Providers\RouteServiceProvider;
-use AdminKit\Feedbacks\Events\FeedbackSaved;
 use Illuminate\Support\Facades\Event;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

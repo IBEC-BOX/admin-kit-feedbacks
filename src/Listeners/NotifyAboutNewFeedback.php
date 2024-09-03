@@ -2,8 +2,8 @@
 
 namespace AdminKit\Feedbacks\Listeners;
 
-use AdminKit\Feedbacks\Mail\FeedbackNotificationMail;
 use AdminKit\Feedbacks\Events\FeedbackSaved;
+use AdminKit\Feedbacks\Mail\FeedbackNotificationMail;
 use Illuminate\Support\Facades\Mail;
 
 class NotifyAboutNewFeedback
