@@ -3,7 +3,10 @@
 namespace AdminKit\Feedbacks;
 
 use AdminKit\Feedbacks\Commands\FeedbacksCommand;
+use AdminKit\Feedbacks\Events\FeedbackSaved;
+use AdminKit\Feedbacks\Listeners\NotifyAboutNewFeedback;
 use AdminKit\Feedbacks\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Event;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -31,5 +34,12 @@ class FeedbacksServiceProvider extends PackageServiceProvider
     public function registeringPackage()
     {
         $this->app->register(RouteServiceProvider::class);
+    }
+
+    public function bootingPackage()
+    {
+        if (config('admin-kit-feedbacks.email_notification.enabled')) {
+            Event::listen(FeedbackSaved::class, NotifyAboutNewFeedback::class);
+        }
     }
 }

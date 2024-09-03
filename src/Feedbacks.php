@@ -2,6 +2,4 @@
 
 namespace AdminKit\Feedbacks;
 
-class Feedbacks
-{
-}
+class Feedbacks {}

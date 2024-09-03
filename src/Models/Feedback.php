@@ -23,6 +23,6 @@ class Feedback extends AbstractModel
 
     protected static function newFactory(): FeedbackFactory
     {
-        return new FeedbackFactory();
+        return new FeedbackFactory;
     }
 }
